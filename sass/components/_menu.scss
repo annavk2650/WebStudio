@@ -1,5 +1,13 @@
 .menu {
-  padding-left: 93px;
+  display: none;
+
+  @include media-breakpoint(767px) {
+    display: block;
+    padding-left: 88px;
+  }
+  @include media-breakpoint(1199px) {
+    padding-left: 93px;
+  }
 }
 
 .menu__list {

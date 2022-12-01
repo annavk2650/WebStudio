@@ -4,10 +4,28 @@
 .header .container {
   display: flex;
   align-items: center;
+  // justify-content: space-between;
 }
 .header__logo {
   padding: 24px 0;
 }
 .logo__dark {
   color: var(--logo-color);
+}
+.header__menu-button {
+  margin-left: auto;
+}
+.menu-button {
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+  border: none;
+  @include media-breakpoint(767px) {
+    display: none;
+  }
+}
+.menu-button__icon {
+  fill: var(--logo-color);
+  width: 40px;
+  height: 40px;
 }

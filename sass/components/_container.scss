@@ -1,7 +1,14 @@
 .container {
-  width: 1200px;
+  max-width: 480px;
   padding-left: 15px;
   padding-right: 15px;
   margin-right: auto;
   margin-left: auto;
+
+  @include media-breakpoint(767px) {
+    max-width: 768px;
+  }
+  @include media-breakpoint(1199px) {
+    max-width: 1200px;
+  }
 }
