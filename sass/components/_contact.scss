@@ -29,7 +29,9 @@
 }
 
 .contact__item:not(:last-child) {
-  margin-right: 50px;
+  @include media-breakpoint(1199px) {
+    margin-right: 50px;
+  }
 }
 .contact__link {
   color: var(--primary-text-color);

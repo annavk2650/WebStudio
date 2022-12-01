@@ -3,8 +3,11 @@
 }
 
 .team__list {
-  display: flex;
-  gap: 30px;
+  display: block;
+  @include media-breakpoint(1199px) {
+    display: flex;
+    gap: 30px;
+  }
 }
 .team__item {
   background-color: var(--primary-white-color);

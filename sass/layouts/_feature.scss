@@ -1,10 +1,26 @@
 .feature__list {
-  display: flex;
-  gap: 30px;
+  display: block;
+  // gap: 30px;
+
+  @include media-breakpoint(767px) {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+  @include media-breakpoint(1199px) {
+    display: flex;
+    gap: 30px;
+  }
 }
 .feature__item {
-  flex-basis: calc((100% - 3 * 30px) / 4);
+  @include media-breakpoint(767px) {
+    flex-basis: calc((100% - 2 * 30px) / 2);
+  }
+  @include media-breakpoint(1199px) {
+    flex-basis: calc((100% - 3 * 30px) / 4);
+  }
 }
+
 .feature__box {
   display: flex;
   height: 120px;
@@ -32,4 +48,5 @@
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
+  margin-bottom: 30px;
 }
