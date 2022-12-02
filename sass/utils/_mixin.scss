@@ -3,3 +3,13 @@
     @content;
   }
 }
+@mixin max-size-media($width) {
+  @media screen and (max-width: $width) {
+    @content;
+  }
+}
+@mixin retina-bgi {
+  @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    @content;
+  }
+}

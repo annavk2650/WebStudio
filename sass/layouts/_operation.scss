@@ -1,11 +1,18 @@
 .button__list {
   display: flex;
-
-  justify-content: center;
-  margin-bottom: 50px;
-}
-.button__item:not(:last-child) {
-  margin-right: 8px;
+  flex-wrap: wrap;
+  @include max-size-media(767px) {
+    max-width: 340px;
+  }
+  gap: 15px 8px;
+  margin-bottom: 40px;
+  @include media-breakpoint(767px) {
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+  @include media-breakpoint(1199px) {
+    margin-bottom: 50px;
+  }
 }
 
 .button__option {
@@ -32,9 +39,26 @@
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
+
+  // @include media-breakpoint(767px) {
+  //   // flex-wrap: wrap;
+  //   // flex-direction: ;
+  // }
+  // @include media-breakpoint(1199px) {
+  //   // flex-wrap: nowrap;
+  // }
 }
+// .operation__item {
+//   outline: 1px solid;
+// }
 .operation__item {
-  flex-basis: calc((100% - 2 * 30px) / 3);
+  flex-basis: 100%;
+  @include media-breakpoint(767px) {
+    flex-basis: calc((100% - 1 * 30px) / 2);
+  }
+  @include media-breakpoint(1199px) {
+    flex-basis: calc((100% - 2 * 30px) / 3);
+  }
 }
 .wrapper {
   position: relative;

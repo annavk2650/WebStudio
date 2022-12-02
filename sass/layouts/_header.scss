@@ -16,8 +16,6 @@
   margin-left: auto;
 }
 .menu-button {
-  width: 40px;
-  height: 40px;
   background-color: transparent;
   border: none;
   @include media-breakpoint(767px) {
@@ -29,6 +27,6 @@
   width: 40px;
   height: 40px;
 }
-.header_menu-button:hover .menu_button-icon {
+.header__menu-button:focus .menu-button__icon {
   fill: var(--accent-color);
 }
