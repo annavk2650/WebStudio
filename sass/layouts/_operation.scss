@@ -39,18 +39,8 @@
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
-
-  // @include media-breakpoint(767px) {
-  //   // flex-wrap: wrap;
-  //   // flex-direction: ;
-  // }
-  // @include media-breakpoint(1199px) {
-  //   // flex-wrap: nowrap;
-  // }
 }
-// .operation__item {
-//   outline: 1px solid;
-// }
+
 .operation__item {
   flex-basis: 100%;
   @include media-breakpoint(767px) {
