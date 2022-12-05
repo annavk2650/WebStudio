@@ -17,6 +17,9 @@
   transform: translateX(0);
 }
 .mobile__wrapper {
+  @include max-size-media(480px) {
+    padding: 48 px 25px;
+  }
   display: flex;
   flex-direction: column;
   height: 100%;
