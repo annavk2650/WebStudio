@@ -235,6 +235,12 @@ img {
   letter-spacing: 0.02em;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+@media screen and (min-width: 1199px) {
+  .contact__link {
+    display: flex;
+    align-items: center;
+  }
+}
 
 .contact__icon {
   justify-content: center;
@@ -329,6 +335,9 @@ img {
   color: var(--title-text-color);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+.mobile-nav__link.current {
+  color: var(--accent-color);
+}
 
 .mobile-nav__link:hover,
 .mobile-nav__link:focus {
@@ -353,6 +362,15 @@ img {
   letter-spacing: 0.02em;
   color: var(--accent-color);
 }
+@media screen and (max-width: 480px) {
+  .mobile-tel {
+    font-weight: 500;
+    font-size: 27px;
+    line-height: 1.17;
+    letter-spacing: 0.02em;
+    color: var(--accent-color);
+  }
+}
 
 .mobile-mail {
   font-weight: 500;
@@ -370,29 +388,39 @@ img {
   margin-top: 64px;
 }
 
-.mobile-social {
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 1.22;
-  letter-spacing: 0.02em;
-  color: var(--accent-color);
+@media screen and (max-width: 480px) {
+  .mobile-social {
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 1.22;
+    letter-spacing: 0.02em;
+    color: var(--accent-color);
+  }
+}
+@media screen and (min-width: 480px) {
+  .mobile-social {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.22;
+    letter-spacing: 0.02em;
+    color: var(--accent-color);
+  }
 }
 
-.mobile-social::after {
+.mobile-social__item:not(:last-child) .mobile-social::after {
   position: absolute;
   bottom: 10px;
   width: 22px;
-  height: 0px;
+  height: 1px;
   content: "";
-  border: 1px solid rgba(33, 33, 33, 0.2);
+  background-color: rgba(33, 33, 33, 0.2);
   transform: rotate(90deg);
 }
 
 .hero {
-  padding-top: 200px;
-  padding-bottom: 200px;
+  padding-top: 118px;
+  padding-bottom: 118px;
   text-align: center;
-  max-width: 1600px;
   margin-left: auto;
   margin-right: auto;
   background-color: var(--accent-background-color);
@@ -437,19 +465,32 @@ img {
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero/hero1600@2x.jpg");
   }
 }
+@media screen and (min-width: 1199px) {
+  .hero {
+    padding-top: 200px;
+    padding-bottom: 200px;
+    max-width: 1600px;
+  }
+}
 
 .hero__title {
-  max-width: 696px;
+  font-size: 26px;
+  line-height: 1.62;
   margin-right: auto;
   margin-left: auto;
   margin-top: 0;
   margin-bottom: 30px;
   color: var(--primary-white-color);
   font-weight: 900;
-  font-size: 44px;
-  line-height: 1.36;
   letter-spacing: 0.06em;
   text-transform: uppercase;
+}
+@media screen and (min-width: 1199px) {
+  .hero__title {
+    max-width: 696px;
+    font-size: 44px;
+    line-height: 1.36;
+  }
 }
 
 .hero__button {
@@ -754,6 +795,7 @@ img {
 }
 
 .footer__address {
+  text-align: center;
   width: 232px;
 }
 @media screen and (min-width: 767px) {
@@ -761,12 +803,17 @@ img {
     margin-right: 70px;
   }
 }
+@media screen and (min-width: 1199px) {
+  .footer__address {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: start;
+  }
+}
 
 .logo__footer {
   display: inline-block;
   margin-bottom: 20px;
-  margin-right: auto;
-  margin-left: auto;
 }
 
 .logo__white {
@@ -782,16 +829,8 @@ img {
 }
 
 .address__item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   padding-left: 0;
   margin-top: 0;
-}
-@media screen and (min-width: 1199px) {
-  .address__item {
-    align-items: normal;
-  }
 }
 
 .address__link {
@@ -820,8 +859,15 @@ img {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.contact__link:hover,
-.contact__link:focus {
+.footer-contact__link {
+  color: var(--footer-contact-color);
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+}
+
+.footer-contact__link:hover,
+.footer-contact__link:focus {
   color: var(--accent-color);
 }
 
@@ -950,18 +996,19 @@ img {
   transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.subscription__input:focus {
-  border-color: var(--accent-color);
-}
 @media screen and (min-width: 767px) {
-  .subscription__input:focus {
-    width: 450px;
+  .subscription__input {
+    max-width: 450px;
   }
 }
 @media screen and (min-width: 1199px) {
-  .subscription__input:focus {
+  .subscription__input {
     width: 358px;
   }
+}
+
+.subscription__input:focus {
+  border-color: var(--accent-color);
 }
 
 .subscription__button {
@@ -999,10 +1046,9 @@ img {
 }
 
 .modal {
+  max-width: 100%;
   position: absolute;
   padding: 40px;
-  width: 528px;
-  height: 581px;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(1);
