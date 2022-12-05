@@ -8,13 +8,13 @@
   flex-direction: column;
   align-items: center;
   gap: 60px;
-  @include media-breakpoint(767px) {
+  @include media-breakpoint(768px) {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: baseline;
   }
-  @include media-breakpoint(1199px) {
+  @include media-breakpoint(1200px) {
     justify-content: normal;
     gap: 0px;
     align-items: baseline;
@@ -22,14 +22,12 @@
 }
 .footer__address {
   text-align: center;
-  width: 232px;
-  @include media-breakpoint(767px) {
+  @include media-breakpoint(768px) {
     margin-right: 70px;
   }
-  @include media-breakpoint(1199px) {
-    display: flex;
-    flex-wrap: wrap;
+  @include media-breakpoint(1200px) {
     text-align: start;
+    margin-right: 93px;
   }
 }
 .logo__footer {
@@ -42,9 +40,6 @@
 
 .address {
   font-style: normal;
-}
-.address__list {
-  margin-bottom: 9px;
 }
 .address__item {
   padding-left: 0;
@@ -85,8 +80,8 @@
   color: var(--accent-color);
 }
 .footer__social {
-  @include media-breakpoint(1199px) {
-    margin-right: auto;
+  @include media-breakpoint(1200px) {
+    margin-right: 93px;
   }
 }
 .footer__text {
@@ -99,7 +94,7 @@
   margin-bottom: 20px;
 
   color: var(--primary-white-color);
-  @include media-breakpoint(1199px) {
+  @include media-breakpoint(1200px) {
     text-align: start;
   }
 }
@@ -138,12 +133,10 @@
   color: var(--primary-white-color);
 }
 .subscription {
-  width: 570px;
   width: 100%;
-  @include media-breakpoint(1199px) {
-    // width: 570px;
+  @include media-breakpoint(1200px) {
+    width: auto;
   }
-  // margin-left: 93px;
 }
 .subscription__text {
   text-align: center;
@@ -155,7 +148,7 @@
   text-transform: uppercase;
 
   color: var(--primary-white-color);
-  @include media-breakpoint(1199px) {
+  @include media-breakpoint(1200px) {
     text-align: start;
   }
 }
@@ -163,7 +156,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  @include media-breakpoint(1199px) {
+  @include media-breakpoint(1200px) {
     flex-direction: row;
     align-items: baseline;
   }
@@ -173,11 +166,11 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin-bottom: 20px;
   width: 100%;
-  @include media-breakpoint(1199px) {
+  @include media-breakpoint(1200px) {
     margin-bottom: 0px;
     display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     width: 100%;
@@ -204,11 +197,12 @@
 }
 .subscription__input {
   margin-bottom: 20px;
-  @include media-breakpoint(767px) {
-    max-width: 450px;
+  @include media-breakpoint(768px) {
+    width: 450px;
   }
-  @include media-breakpoint(1199px) {
+  @include media-breakpoint(1200px) {
     width: 358px;
+    margin-bottom: 0;
   }
 }
 .subscription__input:focus {
